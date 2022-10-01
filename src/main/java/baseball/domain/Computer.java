@@ -1,6 +1,6 @@
 package baseball.domain;
 
-import baseball.application.RandomNumberGenerator;
+import baseball.util.RandomNumberGenerator;
 import java.util.List;
 
 public class Computer {
@@ -11,7 +11,7 @@ public class Computer {
     }
 
     private static Balls createBalls() {
-        List<Integer> randomNumbers = RandomNumberGenerator.create();
+        List<Integer> randomNumbers = RandomNumberGenerator.getThreeRandomNumbers();
         return new Balls(randomNumbers);
     }
 
