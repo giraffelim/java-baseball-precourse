@@ -25,9 +25,9 @@ public class SetTest {
     }
 
     @Test
-    @DisplayName("numbers Set의 크기는 4이다.")
+    @DisplayName("numbers Set의 크기는 3이다.")
     void set_size_test() {
-        assertThat(numbers.size()).isEqualTo(4);
+        assertThat(numbers.size()).isEqualTo(3);
     }
 
     @ParameterizedTest

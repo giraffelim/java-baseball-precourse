@@ -25,7 +25,7 @@ public class StringTest {
     @DisplayName("(1,2)값에서 ()를 제거할 경우 1,2가 된다.")
     void string_substring_test() {
         final String str = "(1,2)";
-        assertThat(str.substring(1, str.length() - 1)).isEqualTo("1, 2");
+        assertThat(str.substring(1, str.length() - 1)).isEqualTo("1,2");
     }
 
     @Test
