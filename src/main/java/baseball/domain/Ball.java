@@ -4,11 +4,9 @@ import java.util.Objects;
 
 public class Ball {
     private final BallNumber ballNumber;
-    private final BallNumberPosition position;
 
-    public Ball(final int number, final int position) {
+    public Ball(final int number) {
         this.ballNumber = new BallNumber(number);
-        this.position = new BallNumberPosition(position);
     }
 
     @Override
@@ -20,11 +18,11 @@ public class Ball {
             return false;
         }
         Ball ball = (Ball) o;
-        return Objects.equals(ballNumber, ball.ballNumber) && Objects.equals(position, ball.position);
+        return Objects.equals(ballNumber, ball.ballNumber);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ballNumber, position);
+        return Objects.hash(ballNumber);
     }
 }
