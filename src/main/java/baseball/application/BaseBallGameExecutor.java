@@ -21,7 +21,7 @@ public class BaseBallGameExecutor {
     public static void execute() {
         do {
             play();
-        } while (!isPlayerExistTheGame());
+        } while (isPlayerExistTheGame());
     }
 
     private static void play() {
@@ -32,7 +32,7 @@ public class BaseBallGameExecutor {
             Referee referee = new Referee();
             judgementResult = referee.judgement(player.getHasBalls(), computer.getHasBalls());
             Printer.printJudgementResult(judgementResult);
-        } while (!isGameEnd(judgementResult));
+        } while (isNotTheEndOfGame(judgementResult));
     }
 
     private static Player prepareUser() {
@@ -44,14 +44,14 @@ public class BaseBallGameExecutor {
     private static boolean isPlayerExistTheGame() {
         Printer.println(ASK_THE_USER_TO_ENTER_EXIST_FLAG.message);
         String userEnteredExistFlag = Inputter.readExistGameFlag();
-        return userEnteredExistFlag.equals(GAME_END_FLAG);
+        return !userEnteredExistFlag.equals(GAME_END_FLAG);
     }
 
-    private static boolean isGameEnd(JudgementResult judgementResult) {
+    private static boolean isNotTheEndOfGame(JudgementResult judgementResult) {
         if (judgementResult.isPlayerWin()) {
             Printer.println(GOT_ALL_THREE_NUMBERS_RIGHT.message);
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }
