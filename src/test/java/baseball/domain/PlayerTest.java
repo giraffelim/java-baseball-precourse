@@ -32,7 +32,6 @@ class PlayerTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"111", "112", "121"})
-    @Test
     void 사용자의_입력_중_중복된_숫자가_있을경우_생성_불가() {
         assertThatCode(() -> new Player("171"))
                 .isInstanceOf(IllegalArgumentException.class)
