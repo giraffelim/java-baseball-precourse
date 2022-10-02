@@ -34,3 +34,6 @@
     - 1을 입력해 게임을 재시작한다.
     - 2를 입력해 게임을 종료한다.
     - 다른 값을 입력한 경우 게임을 종료한다.
+
+## Test Results
+![스크린샷 2022-10-02 오후 5 19 05](https://user-images.githubusercontent.com/44702580/193444986-45c56ae7-5c7c-4a75-b37e-9ccbb0a00db2.png)
