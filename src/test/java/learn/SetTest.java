@@ -44,3 +44,4 @@ public class SetTest {
         assertThat(numbers.contains(element)).isEqualTo(isContain);
     }
 }
+
