@@ -37,13 +37,13 @@ public class BaseBallGameExecutor {
 
     private static Player prepareUser() {
         Printer.print(ASK_THE_USER_TO_ENTER_A_NUMBER.message);
-        String userEnteredNumber = Inputter.readLine();
+        String userEnteredNumber = Inputter.readNumberStringFromUser();
         return new Player(userEnteredNumber);
     }
 
     private static boolean isPlayerExistTheGame() {
         Printer.println(ASK_THE_USER_TO_ENTER_EXIST_FLAG.message);
-        String userEnteredExistFlag = Inputter.readLine();
+        String userEnteredExistFlag = Inputter.readExistGameFlag();
         return userEnteredExistFlag.equals(GAME_END_FLAG);
     }
 
